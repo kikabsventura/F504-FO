@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+<head>
+        <!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="img/fav.png">
+		<!-- Author Meta -->
+		<meta name="author" content="codepixer">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>Galeria Cores do Minho</title>
+
+    <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+        <!--
+        CSS
+        ============================================= -->
+        <link rel="stylesheet" href="css/linearicons.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="css/nice-select.css">					
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/main.css">
+    
+      <!-- CSS Formularios de Doação --> 
+      <link rel="stylesheet" href="css/forms-doacoes.css">
+</head>
+
+<body>
+
+    <!--Pagina Inteira-->
+  <div class="pagina-inteira">
+    <!-- Imagem Header como Background -->
+    <div class="background">
+      <img
+        loading="lazy"
+        src="img/header-bg.jpg"
+        class="img"
+      />
+      <!-- Conteudo da Pagina -->
+      <div class="conteudo">
+        <!-- Barra Nav -->
+        <div class="barra-nav3">
+          <div class="logo-nome">
+            <img
+              loading="lazy"
+              src="img/logo.png"
+              class="img-2"
+            />
+            <div class="nome">Galeria Cores do Minho</div>
+          </div>
+          <nav id="nav-menu-container">
+					  <ul class="nav-menu">
+              <li class="menu-active"><a href="index.html">Home</a></li>
+              <li><a href="about.html">Sobre nós</a></li>
+              <li><a href="eventos.html">Eventos</a></li>
+              <li><a href="form-doacoes.html">Doações</a></li>
+              <li><a href="form-propostas.html">Propostas</a></li>
+              <li><a href="contactos.html">Contactos</a><li>
+              <li class="artistas"><a href="">Artistas</a>
+                <ul>
+                    <li><a href="Maria Venceslau.html">Maria Venceslau</a></li>
+                    <li><a href="laura.html">Laura Gonçalves</a></li>
+                    <li><a href="Joana Duarte.html">Joana Duarte</a></li>
+                    <li><a href="Zé Dias.html">Zé Dias</a></li>
+                    <li><a href="Sara Perreira.html">Sara Pereira</a></li>
+                    <li><a href="Concha Carvalho.html">Concha carvalho</a>
+                    </li></li>
+                  </ul>
+                    <li><a 
+                        
+                    
+                    <div class="navbar-user" id="navbar-user">
+                        <a id="user-link" href="login.html">
+                            <img src="img/Simbolo.svg" alt="Usuário" />
+                        </a>
+                    </div>
+						  
+										  
+					  </ul>
+					</nav><!-- #nav-menu-container -->
+
+            <form style="align-self: center;"  action="index.html" onsubmit="submit(); return false;">
+            <div class="formulario" style="margin-top: 150px; margin-bottom: 150px">
+                <div class="titulo">Efetuar Doação</div>
+
+                <div class="div-16">
+                    <div class="div-17">
+
+                    <!-- Coluna 1-->
+                    <div class="column">
+                    <img
+                        loading="lazy"
+                        src="img/mbway_symbol.png"
+                        class="img-mbway"
+                    />
+                    </div>
+
+                    <!-- Coluna 2-->
+                    <div class="column-2">
+                        <div class="div-18">
+
+                            <!-- Telefone -->
+                            <div class="div-23" style="margin-top: 60px;">
+                            <div class="img-telefone">
+                                <img
+                                loading="lazy"
+                                src="img/phone_symbol.png"
+                                style="height:38px; width:40px; padding-top: 5px; padding-left: 5px"
+                                />
+                            </div>
+                                  <input
+                                    class="texto-primeira-caixa"
+                                    id="inputTelefone"
+                                    type="tel"
+                                    placeholder="Número Telefónico (910 234 567)"
+                                    pattern="[0-9]{3} [0-9]{3} [0-9]{3}"
+                                    onfocus="this.placeholder = ''"
+                                    onblur="this.placeholder = 'Número Telefónico (910 234 567)'"
+                                    readonly
+                            />
+                          </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            
+            <!-- Botão -->
+            <div class="div-botao">
+                <input 
+                    class="primary-btn"
+                    type="submit"
+                    value="DOAR"
+                    style="width: 200px; text-align:center"
+                />
+              </div>
+            
+            </div>
+            </form>
+
+<!--JavaScript desta Pagina-->
+<script src="js/form-doacoes.js"></script>
+
+        </div>
+    </div>
+  </div>
+
+  <script>
+		// Verificar se há um usuário armazenado no localStorage
+		const user = localStorage.getItem('user');
+		if (user) {
+			// Se existir um usuário, redirecione para o perfil_principal.html
+			document.getElementById("user-link").setAttribute("href", "perfil_principal.html");
+		} else {
+			// Se não existir um usuário, redirecione para a página de login
+			document.getElementById("user-link").setAttribute("href", "login.html");
+		}
+	</script>
+
+</body>

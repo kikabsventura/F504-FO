@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+<head>
+        <!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="img/fav.png">
+		<!-- Author Meta -->
+		<meta name="author" content="codepixer">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>Galeria Cores do Minho</title>
+
+    <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+        <!--
+        CSS
+        ============================================= -->
+        <link rel="stylesheet" href="css/linearicons.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="css/nice-select.css">					
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/main.css">
+    
+      <!-- CSS Formularios de Doação --> 
+      <link rel="stylesheet" href="css/forms-doacoes.css">
+
+      <!--Style Formulario-->
+      <link href="css/forms-propostas.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top" ~ onload="ResetFotosProposta()">
+
+  <!--Pagina Inteira-->
+  <div class="pagina-inteira">
+      <!-- Imagem Header como Background -->
+      <div class="background">
+        <img
+          loading="lazy"
+          src="img/header-bg.jpg"
+          class="img"
+        />
+        <!-- Conteudo da Pagina -->
+        <div class="conteudo">
+          <!-- Barra Nav -->
+          <div class="barra-nav1">
+            <div class="logo-nome">
+              <img
+                loading="lazy"
+                src="img/logo.png"
+                class="img-2"
+              />
+              <div class="nome">Galeria Cores do Minho</div>
+            </div>
+            <nav id="nav-menu-container">
+              <ul class="nav-menu">
+                <li class="menu-active"><a href="index.html">Home</a></li>
+                <li><a href="about.html">Sobre nós</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="form-doacoes.html">Doações</a></li>
+                <li><a href="form-propostas.html">Propostas</a></li>
+                <li><a href="contactos.html">Contactos</a><li>
+                <li class="artistas"><a href="Artistas.html">Artistas</a>
+                  <ul>
+                      <li><a href="Maria Venceslau.html">Maria Venceslau</a></li>
+                      <li><a href="laura.html">Laura Gonçalves</a></li>
+                      <li><a href="Joana Duarte.html">Joana Duarte</a></li>
+                      <li><a href="Zé Dias.html">Zé Dias</a></li>
+                      <li><a href="Sara Perreira.html">Sara Pereira</a></li>
+                      <li><a href="Concha Carvalho.html">Concha carvalho</a>
+                      </li></li>
+                    </ul>
+                      <li><a 
+                          
+                      
+                      <div class="navbar-user" id="navbar-user">
+                          <a id="user-link" href="login.html">
+                              <img src="img/Simbolo.svg" alt="Usuário" />
+                          </a>
+                      </div>
+                
+                        
+              </ul>
+            </nav><!-- #nav-menu-container -->	    		
+
+          <!-- Formulario -->
+          <form id="formPropostas" action="" style="align-self: center;">
+          <div class="formulario" style="width:1000px; margin-top: 20px; margin-bottom: 10px">
+            <div class="titulo">Efetuar Proposta</div>
+            
+            <div class="linha"> <!--Linha1-->
+              <div> <!-- Nome Evento -->
+                <input
+                      class="caixa-esquerda"
+                      style="width:450px;height:48px;"
+                      id="NomeProposta"
+                      type="text"
+                      placeholder="Nome do Evento"
+                      onfocus="this.placeholder = ''"
+                      onblur="this.placeholder = 'Nome do Evento'"
+                      value=""
+                      required
+                  />
+              </div>
+              <div> <!-- Selecao Tipo Evento -->
+                <select class="caixa-esquerda" id="TipoEventoProposta" style="width:450px;color:#858796;" required>
+                  <option value="" disabled selected hidden>Tipo de Evento</option> <!-- Valor Inicial -->
+
+                  <option value="Exposicao">Exposição</option>
+                  <option value="Workshop">Workshop</option>
+                                      
+                </select>
+              </div>
+            </div>
+
+            <div class="linha"> <!--Linha2-->
+
+              <!--Foto Artista-->
+              <div class="caixa-com-simbolo">
+                <div>
+                    <p id="foto_artista_placeholder" class="texto-terceira-caixa" style="width: 115px;" id="inputFotografia" type="text" id="propostas_foto_artista">Foto Artista</p>
+                    <img id="foto_artista_preview" src="" style="max-width: 50px; max-height: 50px;display: none;"/>
+                </div>
+                <!-- Styled button to trigger file input -->
+                <label for="foto_artista" class="btn botao-input-photo btn-user btn-block" style="width: 150px;" onclick="triggerFileInput('foto_artista')">Escolher Ficheiro</label>
+                <!-- Hidden file input -->
+                <input type="file" id="foto_artista" accept="image/*" onchange="updateImagePreview('foto_artista_placeholder', 'foto_artista_preview', this);" style="display: none;">
+                
+              </div>
+
+              <!--Foto Evento-->
+              <div class="caixa-com-simbolo">
+                <div>
+                    <p id="foto_apresentacao_placeholder" class="texto-terceira-caixa" style="width: 160px;" id="inputFotografia" type="text" id="propostas_foto_evento">Foto Apresentação</p>
+                    <img id="foto_apresentacao_preview" src="" style="max-width: 50px; max-height: 50px; display: none;" />
+                </div>
+              <!-- Styled button to trigger file input -->
+              <label for="foto_evento" class="btn botao-input-photo btn-user btn-block" style="width: 150px;" onclick="triggerFileInput('foto_evento')">Escolher Ficheiro</label>
+              <!-- Hidden file input -->
+              <input type="file" id="foto_evento" accept="image/*" onchange="updateImagePreview('foto_apresentacao_placeholder', 'foto_apresentacao_preview', this);" style="display: none;">
+              </div>
+
+              <!--Fotos do Portfolio-->
+              <div class="larger-box" style="padding-top: 10px;">
+                <p class="box-text" style="margin-left: 10px;">Fotos de Portfolio</p>
+                <!-- Botões de input de fotografias -->
+                <div>
+                  <label for="foto_portfolio_1_upload" class="btn botao-input-photo btn-user btn-block square-button" style="margin-right: 5px;">+</label>
+                  <input type="file" id="foto_portfolio_1_upload" accept="image/*" onchange="mostrarFoto(this, 'foto_portfolio_1_preview');" style="display: none;">
+                  <img id="foto_portfolio_1_preview" src="" style="max-width: 30px; max-height: 30px; display: none;" />
+                </div>
+                <div>
+                  <label for="foto_portfolio_2_upload" class="btn botao-input-photo btn-user btn-block square-button" style="margin-right: 5px;">+</label>
+                  <input type="file" id="foto_portfolio_2_upload" accept="image/*" onchange="mostrarFoto(this, 'foto_portfolio_2_preview');" style="display: none;">
+                  <img id="foto_portfolio_2_preview" src="" style="max-width: 30px; max-height: 30px; display: none;" />
+                </div>
+                <div>
+                  <label for="foto_portfolio_3_upload" class="btn botao-input-photo btn-user btn-block square-button" style="margin-right: 5px;">+</label>
+                  <input type="file" id="foto_portfolio_3_upload" accept="image/*" onchange="mostrarFoto(this, 'foto_portfolio_3_preview');" style="display: none;">
+                  <img id="foto_portfolio_3_preview" src="" style="max-width: 30px; max-height: 30px; display: none;" />
+                </div>
+                <div>
+                  <label for="foto_portfolio_4_upload" class="btn botao-input-photo btn-user btn-block square-button" style="margin-right: 5px;">+</label>
+                  <input type="file" id="foto_portfolio_4_upload" accept="image/*" onchange="mostrarFoto(this, 'foto_portfolio_4_preview');" style="display: none;">
+                  <img id="foto_portfolio_4_preview" src="" style="max-width: 30px; max-height: 30px; display: none;" />
+                </div>
+                <div>
+                  <label for="foto_portfolio_5_upload" class="btn botao-input-photo btn-user btn-block square-button" style="margin-right: 5px;">+</label>
+                  <input type="file" id="foto_portfolio_5_upload" accept="image/*" onchange="mostrarFoto(this, 'foto_portfolio_5_preview');" style="display: none;">
+                  <img id="foto_portfolio_5_preview" src="" style="max-width: 30px; max-height: 30px; display: none;" />
+                </div>
+                <div>
+                  <label for="foto_portfolio_6_upload" class="btn botao-input-photo btn-user btn-block square-button" style="margin-right: 10px;">+</label>
+                  <input type="file" id="foto_portfolio_6_upload" accept="image/*" onchange="mostrarFoto(this, 'foto_portfolio_6_preview');" style="display: none;">
+                  <img id="foto_portfolio_6_preview" src="" style="max-width: 30px; max-height: 30px; display: none;" />
+                </div>
+              </div>
+
+            </div><!--Final Linha 2-->
+
+            <div class="linha" style="margin-top: 5px;"> <!--Linha3-->
+
+              <!--Breve Descrição do Artista-->
+              <textarea class="caixa-area"id="BreveDescricaoArtista"style="height:50px;color:#858796"placeholder="Breve Descrição do Artista"onfocus="this.placeholder=''"onblur="this.placeholder='Breve Descrição do Artista'"value=""required></textarea>
+
+              <!--Breve Descrição do Evento-->
+              <textarea class="caixa-area"id="BreveDescricaoEvento"style="margin-right:10px;height:50px;color:#858796"placeholder="Breve Descrição do Evento"onfocus="this.placeholder=''"onblur="this.placeholder='Breve Descrição do Evento'"value=""required></textarea>
+
+            </div>
+
+            <div class="linha"> <!--Linha4-->
+              <!--Comentário do Artista-->
+              <textarea class="caixa-area"id="ComentarioArtista"style="margin-right:10px;height:80px;color:#858796"placeholder="Comentário do Artista"onfocus="this.placeholder=''"onblur="this.placeholder='Comentário do Artista'"value=""required></textarea>
+            </div>
+
+            <div class="linha"> <!--Linha5-->
+
+              <!--Descrição do Evento-->
+              <textarea class="caixa-area"id="DescricaoEvento"style="margin-right:10px;height:100px;color:#858796"placeholder="Descrição do Evento"onfocus="this.placeholder=''"onblur="this.placeholder='Descrição do Evento'"value=""required></textarea>
+
+            </div>
+
+            <!-- Botão -->
+            <div class="div-botao">
+              <input 
+                  class="primary-btn"
+                  id="registProposta"
+                  type="submit"
+                  value="PROPOR"
+                  style="width: 200px; text-align:center"
+                  onclick = "registarProposta(); registarPropostaUser();"
+              />
+            </div>
+          </div>
+          </form>
+
+          <!--JavaScript desta Pagina-->
+          <script src="js/form-propostas.js"></script>
+          <script src="js/tabelas_perfil.js"></script>
+
+          <!-- Bootstrap core JavaScript-->
+          <script src="../BackOffice/vendor/jquery/jquery.min.js"></script>
+          <script src="../BackOffice/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+          <!-- Core plugin JavaScript-->
+          <script src="../BackOffice/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+          <!-- Custom scripts for all pages-->
+          <script src="../BackOffice/js/sb-admin-2.min.js"></script>
+
+          <!-- Page level plugins -->
+          <script src="../BackOffice/vendor/chart.js/Chart.min.js"></script>
+
+          <!-- Page level custom scripts -->
+          <script src="../BackOffice/js/demo/chart-area-demo.js"></script>
+          <script src="../BackOffice/js/demo/chart-pie-demo.js"></script>
+
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Verificar se há um usuário armazenado no localStorage
+      const user = localStorage.getItem('user');
+      if (user) {
+          // Se existir um usuário, redirecione para o perfil_principal.html
+          document.getElementById("user-link").setAttribute("href", "perfil_principal.html");
+      } else {
+          // Se não existir um usuário, redirecione para a página de login
+          document.getElementById("user-link").setAttribute("href", "login.html");
+      }
+    </script>
+
+</body>

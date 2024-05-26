@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+<head>
+        <!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="img/fav.png">
+		<!-- Author Meta -->
+		<meta name="author" content="codepixer">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>Galeria Cores do Minho</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+        <!--
+        CSS
+        ============================================= -->
+        <link rel="stylesheet" href="css/linearicons.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="css/nice-select.css">					
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/main.css">
+    
+      <!-- CSS Formularios de Doação --> 
+      <link rel="stylesheet" href="css/forms-doacoes.css">
+
+      <!-- CSS Login -->
+      <link rel="stylesheet" href="css/login.css">
+
+      <!--CODIDO BOTÃO LOGIN DA GOOGLE-->
+      <script src="https://accounts.google.com/gsi/client" async></script>z
+
+
+</head>
+
+<body>
+
+  <!--BOTAO LOGIN-->
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-analytics.js";
+    import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-auth.js";
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyBi3eQl7z_RBDsI3s79BgaTs7Noo6efO4A",
+      authDomain: "kika-login-teste.firebaseapp.com",
+      projectId: "kika-login-teste",
+      storageBucket: "kika-login-teste.appspot.com",
+      messagingSenderId: "686876725608",
+      appId: "1:686876725608:web:af0a867925ba20c48906dd",
+      measurementId: "G-Q2ED6DE029"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const auth = getAuth();
+  
+    const provider = new GoogleAuthProvider();
+    
+    //----- Google login code start
+    document.getElementById("google-login").addEventListener("click", function() {
+      signInWithPopup(auth, provider)
+      .then((result) => {
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        const credential = GoogleAuthProvider.credentialFromResult(result);
+        const token = credential.accessToken;
+        // The signed-in user info.
+        const user = result.user;
+        // Atualizar o link do utilizador após o utilizador iniciar sessão com sucesso
+        const nomeUtilizador = user.displayName; //nome
+        const fotoUtilizador = user.photoURL; //foto de perfil
+        const emailUtilizador = user.email; // Email do utilizador
+        // Guardar no localStorage
+        localStorage.setItem('user', user);
+        localStorage.setItem('nomeUtilizador', nomeUtilizador);
+        localStorage.setItem('fotoUtilizador', fotoUtilizador);
+        localStorage.setItem('emailUtilizador', emailUtilizador);
+        alert("Welcome " + user.displayName);
+        console.log(user);
+        window.location.href = "perfil_principal.html"
+        // ...
+      }).catch((error) => {
+        // Handle Errors here.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorMessage);
+        // The email of the user's account used.
+        const email = error.customData.email;
+        // The AuthCredential type that was used.
+        const credential = GoogleAuthProvider.credentialFromError(error);
+        // ...
+      });
+    });
+    //----- End
+  </script>
+
+  
+  
+  <!--Pagina Inteira-->
+  <div class="pagina-inteira">
+      <!-- Imagem Header como Background -->
+      <div class="background">
+        <img
+          loading="lazy"
+          src="img/header-bg.jpg"
+          class="img"
+        />
+        <!-- Conteudo da Pagina -->
+        <div class="conteudo">
+          <!-- Barra Nav -->
+          <div class="barra-nav1">
+            <div class="logo-nome">
+              <img
+                loading="lazy"
+                src="img/logo.png"
+                class="img-2"
+              />
+              <div class="nome">Galeria Cores do Minho</div>
+            </div>
+            <nav id="nav-menu-container">
+              <ul class="nav-menu">
+                <li class="menu-active"><a href="index.html">Home</a></li>
+                <li><a href="about.html">Sobre nós</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="form-doacoes.html">Doações</a></li>
+                <li><a href="form-propostas.html">Propostas</a></li>
+                <li><a href="contactos.html">Contactos</a><li>
+                <li class="artistas"><a href="Artistas.html">Artistas</a>
+                  <ul>
+                      <li><a href="Maria Venceslau.html">Maria Venceslau</a></li>
+                      <li><a href="laura.html">Laura Gonçalves</a></li>
+                      <li><a href="Joana Duarte.html">Joana Duarte</a></li>
+                      <li><a href="Zé Dias.html">Zé Dias</a></li>
+                      <li><a href="Sara Perreira.html">Sara Pereira</a></li>
+                      <li><a href="Concha Carvalho.html">Concha carvalho</a>
+                      </li></li>
+                    </ul>
+                      <li><a 
+                          
+                      
+                      <div class="navbar-user" id="navbar-user">
+                          <a id="user-link" href="#">
+                              <img src="img/Simbolo.svg" alt="Usuário" />
+                          </a>
+                      </div>   
+                            
+              </ul>
+            </nav><!-- #nav-menu-container -->		    		
+
+          <!-- Formulario -->
+          <form style="align-self: center;" onsubmit="submitForm(); return false;">
+          <div class="login-box" style="margin-top: 150px; margin-bottom: 300px">
+            <div class="titulo">Sign In</div>
+
+            <!--BOTAO LOGIN FUNCIONAL-->
+            <div class="container">    
+              <div class="row">
+                <div class="col-sm-4">
+                  <button type="button" id="google-login" name="google-login" class="btn btn-danger btn-lg btn-block"
+                    style="border-radius:20px; height:40px; width: 200px; margin-left: 145px; margin-top: 15px;" >
+                    <i class="fa fa-google"></i> Login with Google
+                  </button>
+                </div><!-- end col -->    
+              </div><!--  end row -->        
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- local and session storage arquivo json-->
+    <script src="js/login_perfil.js" defer></script>
+
+    <!-- local and session storage arquivo json-->
+    <script src="js/main.js" defer></script>
+
+    <script>
+      // Verificar se há um usuário armazenado no localStorage
+      const user = localStorage.getItem('user');
+      if (user) {
+          // Se existir um usuário, redirecione para o perfil_principal.html
+          document.getElementById("user-link").setAttribute("href", "perfil_principal.html");
+      } else {
+          // Se não existir um usuário, redirecione para a página de login
+          document.getElementById("user-link").setAttribute("href", "login.html");
+      }
+    </script>
+
+</body>
+
+
