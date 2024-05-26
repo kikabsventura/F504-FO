@@ -1,0 +1,89 @@
+/* Caixa de Login */
+.login-box {
+    width: 600px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 0px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: auto;
+    position: relative;
+  }
+  
+  @media (max-width: 991px) {
+    .login-box {
+        margin: 40px 0;
+        padding: 0 90px;
+    }
+  }
+  
+  /* Botão "Sign in with Google" */
+  .google-sign-in {
+    
+    position: relative;
+    padding: 10px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    color: rgba(60, 64, 67, 1); /* Cor do texto */
+    text-align: center;
+    display: inline-block;
+    margin: 10px auto;
+    transition: all 0.3s ease;
+    width: 284.01px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #DADCE0;
+    border-radius: 25px;
+    margin-top: 40px; /* Adiciona espaço acima do botão */
+    margin-bottom: -2px;
+    
+   
+  }
+  
+  .google-sign-in:hover {
+    background-color: #f1f3f4; /* Cor do hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .google-button-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+  font-weight: 275;
+  
+  }
+  
+  .register-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: rgba(60, 64, 67, 1);
+    margin-top: 8px;
+    font-weight: bold;
+    letter-spacing: 0.25px;
+    font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.25px;
+  }
+  
+  .register-link {
+    color: #d32f2f;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.25px;
+  }
+  
+  .img-logogoogle{
+    position: absolute; /* Posiciona a imagem à esquerda */
+    left: 10px; /* Ajuste conforme necessário para posicionar corretamente */
+    vertical-align: middle; /* Centraliza verticalmente a imagem */
+    width: 17.35px;
+    height: 14.97px;
+  }
+  

@@ -1,0 +1,47 @@
+  .banner-pequena {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    height: 150px;
+    font-size: 12px;
+    color: #fff;
+    justify-content: center;
+  }
+  .img-header-pequeno {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .overlay-pequeno {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 80px 80px;
+  }
+  @media (max-width: 991px) {
+    .overlay-pequeno {
+      max-width: 100%;
+      padding-right: 20px;
+    }
+  }
+  .barra-nav-pequena {
+    display: flex;
+    margin-bottom: 43px;
+    width: 100%;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  @media (max-width: 991px) {
+    .barra-nav-pequena {
+      max-width: 100%;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+  }
